@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "ct234",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Derick Welman",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.2.0"
+  },
+  "dependencies": {
+    "babel-jest": "^27.2.1"
+  }
+}
