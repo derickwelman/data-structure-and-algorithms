@@ -49,6 +49,4 @@ function strongConnected(vertices){
 
 }
 
-module.exports = {
-    tarjan: tarjan,
-}
+module.exports = {tarjan}

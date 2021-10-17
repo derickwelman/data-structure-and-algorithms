@@ -1,6 +1,6 @@
 const { strongConnections } = require("../../../src/graphs/tarjan/strongConnections");
 
-test('Strong connections', () => {
+test.skip('Strong connections', () => {
     
     // 0 1 2 3 4 5 6 7 Index
     // A B C D E F G H Correspondent letter
