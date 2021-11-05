@@ -1,22 +1,20 @@
 const { strongConnections } = require("../../../src/graphs/tarjan/strongConnections");
 
-test.skip('Strong connections', () => {
+test('Strong connections', () => {
     
-    // 0 1 2 3 4 5 6 7 Index
-    // A B C D E F G H Correspondent letter
-    let vertices = [
-        [1, 4, 5],
-        [2],
-        [5],
-        [2, 4, 6],
-        [2],
-        [1],
-        [3],
-        [],
+    let graph = [
+        [1, 4, 5],  // A 0
+        [2],        // B 1
+        [5],        // C 2
+        [2, 4, 6],  // D 3
+        [2],        // E 4
+        [1],        // F 5
+        [3],        // G 6
+        [],         // H 7
     ];
 
-    //jest.setTimeout(5000);
-
-    expect(strongConnections(vertices)).toStrictEqual([[7], [1, 2, 5]], [4], [0], [3, 6]);
+    let connections = strongConnections(graph);
+    console.log(connections);
+    expect(strongConnections(graph)).toStrictEqual([[7], [1, 2, 5]], [4], [0], [3, 6]);
 
 })

@@ -1,4 +1,4 @@
-function strongConnections(vertices){
+function strongConnections(graph){
     
     let connectionStack = [];
     let connectionMinimum = [];
@@ -7,10 +7,10 @@ function strongConnections(vertices){
     let exploration = [];
     let explorationCount = 0; // Increment on each new vertice that is visited
     
-    for (let i = 0; i < vertices.length; i++)
+    for (let i = 0; i < graph.length; i++)
     exploration[i] = 0;
     
-    for (let verticeIndex = 0; verticeIndex < vertices.length; verticeIndex++)
+    for (let verticeIndex = 0; verticeIndex < graph.length; verticeIndex++)
         if(exploration[verticeIndex] == 0)
             DFSCFC(verticeIndex);
 
@@ -27,10 +27,10 @@ function strongConnections(vertices){
         connectionStack.push(verticeIndex);
         connectionMinimum[verticeIndex] = exploration[verticeIndex];
 
-        for(let i = 0; i < vertices[verticeIndex].length; i++){
+        for(let i = 0; i < graph[verticeIndex].length; i++){
 
 
-            let edgeTarget = vertices[verticeIndex][i];
+            let edgeTarget = graph[verticeIndex][i];
             
             if(exploration[edgeTarget] === 0){
                 DFSCFC(edgeTarget);

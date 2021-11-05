@@ -46,7 +46,6 @@ function strongConnected(vertices){
         
     }
 
-
 }
 
 module.exports = {
